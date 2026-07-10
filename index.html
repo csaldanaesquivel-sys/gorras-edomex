@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gorras Edomex</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Gorras Edomex</h1>
+    <button id="openCart">Carrito <span id="cartCount">0</span></button>
+  </header>
+
+  <section class="hero">
+    <h2>Gorras urbanas G5</h2>
+    <p>Todas a $1,000 MXN. Envíos nacionales. Entrega de 5 días a 3 semanas.</p>
+  </section>
+
+  <main>
+    <h2>Disponibles ahora</h2>
+    <div id="products" class="grid"></div>
+  </main>
+
+  <aside id="cart" class="cart">
+    <button id="closeCart">Cerrar</button>
+    <h2>Tu carrito</h2>
+    <div id="cartItems"></div>
+    <strong id="total">$0 MXN</strong>
+
+    <form id="checkoutForm">
+      <input name="name" placeholder="Nombre completo" required />
+      <input name="phone" placeholder="Teléfono" required />
+      <input name="email" type="email" placeholder="Correo" required />
+      <textarea name="address" placeholder="Dirección completa" required></textarea>
+
+      <select name="paymentMethod" id="paymentMethod" required>
+        <option value="">Método de pago</option>
+        <option>Transferencia</option>
+        <option>Depósito</option>
+        <option>Otro acordado por WhatsApp</option>
+      </select>
+
+      <div id="transferBox" class="hidden">
+        <p><b>Banco:</b> PON_AQUI_TU_BANCO</p>
+        <p><b>Titular:</b> PON_AQUI_TITULAR</p>
+        <p><b>Cuenta/CLABE:</b> PON_AQUI_TU_CLABE</p>
+        <p><b>Concepto:</b> <span id="concept">GORRAS EDOMEX</span></p>
+      </div>
+
+      <input name="proof" type="file" accept="image/*,.pdf" required />
+      <p class="note">WhatsApp no adjunta archivos automáticamente. Adjunta la captura al abrir el chat.</p>
+
+      <button type="submit">Generar pedido</button>
+    </form>
+
+    <a id="whatsappBtn" class="whatsapp hidden" target="_blank">Enviar por WhatsApp</a>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
